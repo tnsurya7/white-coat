@@ -8,8 +8,6 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    country: '',
-    budget: '',
     propertyInterest: '',
     message: '',
   });
@@ -37,8 +35,6 @@ const ContactForm = () => {
         setFormData({
           name: '',
           email: '',
-          country: '',
-          budget: '',
           propertyInterest: '',
           message: '',
         });
@@ -94,48 +90,6 @@ const ContactForm = () => {
             className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold-500 focus:border-transparent outline-none transition-all"
             placeholder="doctor@example.com"
           />
-        </div>
-
-        <div>
-          <label htmlFor="country" className="block text-sm font-semibold text-gray-700 mb-2">
-            Current Country *
-          </label>
-          <select
-            id="country"
-            name="country"
-            required
-            value={formData.country}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold-500 focus:border-transparent outline-none transition-all"
-          >
-            <option value="">Select Country</option>
-            <option value="USA">United States</option>
-            <option value="UK">United Kingdom</option>
-            <option value="Canada">Canada</option>
-            <option value="Australia">Australia</option>
-            <option value="UAE">UAE</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-
-        <div>
-          <label htmlFor="budget" className="block text-sm font-semibold text-gray-700 mb-2">
-            Budget Range *
-          </label>
-          <select
-            id="budget"
-            name="budget"
-            required
-            value={formData.budget}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gold-500 focus:border-transparent outline-none transition-all"
-          >
-            <option value="">Select Budget</option>
-            <option value="2-4 Cr">₹2-4 Crores</option>
-            <option value="4-6 Cr">₹4-6 Crores</option>
-            <option value="6-10 Cr">₹6-10 Crores</option>
-            <option value="10+ Cr">₹10+ Crores</option>
-          </select>
         </div>
 
         <div>

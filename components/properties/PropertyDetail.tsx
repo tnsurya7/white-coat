@@ -44,9 +44,9 @@ const PropertyDetail = ({ id }: PropertyDetailProps) => {
   };
 
   return (
-    <div className="min-h-screen pt-20 bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Image Gallery */}
-      <div className="relative h-[60vh] bg-gray-900">
+      <div className="relative h-[60vh] bg-gray-900 mt-32 sm:mt-28 md:mt-24 lg:mt-20">
         <Image
           src={property.images[0]}
           alt={property.title}

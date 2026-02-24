@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const ContactHero = () => {
   return (
-    <section className="relative h-[40vh] flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden pt-32 sm:pt-28 md:pt-24 lg:pt-20">
       <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-gray-900">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920')] bg-cover bg-center opacity-20"></div>
       </div>

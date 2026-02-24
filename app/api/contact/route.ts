@@ -4,10 +4,10 @@ import nodemailer from 'nodemailer';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, country, budget, propertyInterest, message } = body;
+    const { name, email, propertyInterest, message } = body;
 
     // Validate required fields
-    if (!name || !email || !country || !budget || !message) {
+    if (!name || !email || !message) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -58,16 +58,6 @@ export async function POST(request: NextRequest) {
               <div class="field">
                 <div class="label">Email:</div>
                 <div class="value">${email}</div>
-              </div>
-              
-              <div class="field">
-                <div class="label">Country:</div>
-                <div class="value">${country}</div>
-              </div>
-              
-              <div class="field">
-                <div class="label">Budget Range:</div>
-                <div class="value">${budget}</div>
               </div>
               
               ${propertyInterest ? `

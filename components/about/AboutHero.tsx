@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const AboutHero = () => {
   return (
-    <section className="relative h-[60vh] flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 sm:pt-28 md:pt-24 lg:pt-20">
       <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-gray-900">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920')] bg-cover bg-center opacity-20"></div>
       </div>
