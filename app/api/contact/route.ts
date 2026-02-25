@@ -83,8 +83,63 @@ export async function POST(request: NextRequest) {
       `,
     };
 
-    // Send email
+    // Email to WhiteCoat (you)
     await transporter.sendMail(mailOptions);
+
+    // Confirmation email to sender
+    const confirmationMailOptions = {
+      from: process.env.EMAIL_USER || 'your-email@gmail.com',
+      to: email,
+      subject: 'Thank you for contacting WhiteCoat',
+      html: `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+            .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+            .header { background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+            .content { background: #f9fafb; padding: 30px; border-radius: 0 0 10px 10px; }
+            .message { background: white; padding: 20px; border-radius: 5px; margin: 20px 0; border-left: 4px solid #eab308; }
+            .footer { text-align: center; margin-top: 20px; color: #666; font-size: 12px; }
+            .highlight { color: #0369a1; font-weight: bold; }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="header">
+              <h1>🏥 WhiteCoat</h1>
+              <p style="margin: 0; font-size: 18px;">Thank you for reaching out!</p>
+            </div>
+            <div class="content">
+              <p>Dear <span class="highlight">${name}</span>,</p>
+              
+              <p>Thank you for contacting WhiteCoat. We have received your inquiry and our team will review it shortly.</p>
+              
+              <div class="message">
+                <p><strong>Your Message:</strong></p>
+                <p>${message}</p>
+                ${propertyInterest ? `<p><strong>Property Interest:</strong> ${propertyInterest}</p>` : ''}
+              </div>
+              
+              <p>We aim to respond to all inquiries within <span class="highlight">24 hours</span>. If your matter is urgent, please feel free to call us directly.</p>
+              
+              <p>Best regards,<br>
+              <strong>The WhiteCoat Team</strong></p>
+              
+              <div class="footer">
+                <p>This is an automated confirmation email.</p>
+                <p>Please do not reply to this email.</p>
+              </div>
+            </div>
+          </div>
+        </body>
+        </html>
+      `,
+    };
+
+    // Send confirmation email to sender
+    await transporter.sendMail(confirmationMailOptions);
 
     return NextResponse.json(
       { message: 'Email sent successfully' },
