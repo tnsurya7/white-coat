@@ -6,6 +6,22 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.santiamestates.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.roofandfloor.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '4.imimg.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'dynamic.realestateindia.com',
+      },
     ],
   },
   // Enable React strict mode for better development experience

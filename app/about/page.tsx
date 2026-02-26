@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import AboutHero from '@/components/about/AboutHero';
 import OurStory from '@/components/about/OurStory';
 import OurValues from '@/components/about/OurValues';
-import Team from '@/components/about/Team';
 import Stats from '@/components/about/Stats';
 
 export const metadata: Metadata = {
@@ -21,7 +20,6 @@ export default function AboutPage() {
       <OurStory />
       <OurValues />
       <Stats />
-      <Team />
     </>
   );
 }

@@ -75,9 +75,6 @@ const FeaturedProperties = () => {
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 right-4 px-4 py-2 bg-gold-500 text-white rounded-full font-bold">
-                      {property.price}
-                    </div>
                   </div>
 
                   <div className="p-6">
