@@ -36,7 +36,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed px-4">
-            Curated luxury real estate investments designed exclusively for medical professionals abroad
+            Beyond Property Scouting: We negotiate exclusive developer rates for NRI Doctors, passing a 5% direct price advantage straight to you
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -69,7 +69,7 @@ const Hero = () => {
         >
           {[
             { value: '500+', label: 'NRI Doctors Trust Us' },
-            { value: '50+', label: 'Countries' },
+            { value: '10+', label: 'Country Served' },
             { value: '50+', label: 'Premium Locations' },
           ].map((stat, index) => (
             <motion.div
