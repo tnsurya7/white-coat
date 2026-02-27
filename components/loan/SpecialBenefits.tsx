@@ -58,13 +58,13 @@ const SpecialBenefits = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-all"
+              className="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-all bg-white/90"
             >
               <div className="w-14 h-14 bg-gradient-to-br from-gold-500 to-gold-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <benefit.icon className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
-              <p className="text-gray-300 text-sm">{benefit.description}</p>
+              <h3 className="text-lg font-bold mb-2 text-gray-900">{benefit.title}</h3>
+              <p className="text-gray-700 text-sm">{benefit.description}</p>
             </motion.div>
           ))}
         </div>
@@ -74,20 +74,20 @@ const SpecialBenefits = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-card p-6 sm:p-8 rounded-2xl"
+          className="glass-card p-6 sm:p-8 rounded-2xl bg-white/90"
         >
-          <h3 className="text-2xl font-bold text-center mb-6">Partner Banks for NRI Loans</h3>
+          <h3 className="text-2xl font-bold text-center mb-6 text-gray-900">Partner Banks for NRI Loans</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {banks.map((bank, index) => (
               <div
                 key={index}
-                className="px-6 py-3 bg-white/10 rounded-full text-white font-semibold hover:bg-white/20 transition-all"
+                className="px-6 py-3 bg-white/10 rounded-full text-gray-900 font-semibold hover:bg-white/20 transition-all"
               >
                 {bank}
               </div>
             ))}
           </div>
-          <p className="text-center text-gray-300 mt-6 text-sm">
+          <p className="text-center text-gray-800 mt-6 text-sm">
             👉 WhiteCoat can help you connect with the right bank for your needs
           </p>
         </motion.div>
