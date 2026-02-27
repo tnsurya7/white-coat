@@ -96,9 +96,12 @@ const ContactInfo = () => {
         <p className="text-gray-600 mb-6">
           Prefer to speak directly? Book a consultation call with our property experts.
         </p>
-        <button className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all">
+        <a 
+          href="tel:+919003252500"
+          className="block w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all text-center"
+        >
           Book Consultation
-        </button>
+        </a>
       </motion.div>
     </motion.div>
   );
