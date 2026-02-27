@@ -46,7 +46,14 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-gold-500 mt-0.5" />
-                <span className="text-gray-400 text-sm">No.92, Devadoss street, CH-40, VGN, Chennai 600 040</span>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=No.92+Devadoss+street+CH-40+VGN+Chennai+600040"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 text-sm hover:text-gold-500 transition-colors"
+                >
+                  No.92, Devadoss street, CH-40, VGN, Chennai 600 040
+                </a>
               </li>
             </ul>
           </div>

@@ -9,21 +9,26 @@ const ContactInfo = () => {
       icon: Phone,
       title: 'Phone',
       details: ['+91 90032 52500'],
+      isLink: false,
     },
     {
       icon: Mail,
       title: 'Email',
       details: ['wcrealtyproperties@gmail.com'],
+      isLink: false,
     },
     {
       icon: MapPin,
       title: 'Office',
       details: ['No.92, Devadoss street, CH-40, VGN', 'Chennai 600 040'],
+      isLink: true,
+      link: 'https://www.google.com/maps/search/?api=1&query=No.92+Devadoss+street+CH-40+VGN+Chennai+600040',
     },
     {
       icon: Clock,
       title: 'Working Hours',
       details: ['Mon - Sat: 9:00 AM - 7:00 PM', 'Sunday: Closed'],
+      isLink: false,
     },
   ];
 
@@ -56,11 +61,26 @@ const ContactInfo = () => {
               </div>
               <div>
                 <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
-                {item.details.map((detail, idx) => (
-                  <p key={idx} className="text-gray-600 text-sm">
-                    {detail}
-                  </p>
-                ))}
+                {item.isLink ? (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 text-sm hover:text-gold-600 transition-colors block"
+                  >
+                    {item.details.map((detail, idx) => (
+                      <span key={idx} className="block">
+                        {detail}
+                      </span>
+                    ))}
+                  </a>
+                ) : (
+                  item.details.map((detail, idx) => (
+                    <p key={idx} className="text-gray-600 text-sm">
+                      {detail}
+                    </p>
+                  ))
+                )}
               </div>
             </motion.div>
           ))}
