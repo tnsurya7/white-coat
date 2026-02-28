@@ -67,7 +67,7 @@ const Hero = () => {
               className="inline-block text-white font-semibold"
             >
               Beyond Property Scouting: We negotiate exclusive developer rates for NRI Doctors, passing a{' '}
-              <span className="text-gold-400 font-bold text-2xl sm:text-3xl md:text-4xl">
+              <span className="text-white font-bold">
                 5% direct price advantage
               </span>
               {' '}straight to you
