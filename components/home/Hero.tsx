@@ -35,9 +35,48 @@ const Hero = () => {
             <span className="text-gradient">Premium Properties</span>
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed px-4">
-            Beyond Property Scouting: We negotiate exclusive developer rates for NRI Doctors, passing a 5% direct price advantage straight to you
-          </p>
+          <motion.p 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed px-4"
+          >
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              className="inline-block"
+            >
+              Beyond Property Scouting: 
+            </motion.span>
+            {' '}
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+              className="inline-block"
+            >
+              We negotiate exclusive developer rates for NRI Doctors, passing a
+            </motion.span>
+            {' '}
+            <motion.span
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.0, duration: 0.6, type: "spring", stiffness: 200 }}
+              className="inline-block text-gold-400 font-bold text-2xl sm:text-3xl md:text-4xl"
+            >
+              5% direct price advantage
+            </motion.span>
+            {' '}
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2, duration: 0.6 }}
+              className="inline-block"
+            >
+              straight to you
+            </motion.span>
+          </motion.p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
